@@ -15,4 +15,11 @@ body {
     text-align: center;
     padding: 35px 35px;   
 }
+.form-group {
+    margin-bottom: 20px;
+}
 
+label {
+    display: flex;
+    margin-bottom: 5px;
+}
