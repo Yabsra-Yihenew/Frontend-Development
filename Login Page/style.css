@@ -43,3 +43,7 @@ button {
 button:hover {
     background-color: #46c2d8;
 }
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
