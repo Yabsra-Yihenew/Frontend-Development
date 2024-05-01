@@ -37,6 +37,7 @@
             font-size: 18px;
             color: #555;
             transition: opacity 0.3s ease-in-out;
+            pointer-events: none;
         }
 
         .big-div:hover {
@@ -80,7 +81,7 @@
 <body>
     <h1>Car Collections</h1>
     <div class="big-div" id="selected-div">
-        <p>Hover over images to preview</p>
+        <p id="preview-text">Hover over images to preview</p>
     </div>
 
     <div class="small-div" onmouseover="changeImage(this)" onmouseout="undo()">
@@ -97,18 +98,18 @@
 
     <script>
         var defaultBackground = document.getElementById('selected-div').style.backgroundImage;
-        var defaultText = document.getElementById('selected-div').innerHTML;
+        var defaultText = document.getElementById('preview-text').innerHTML;
 
         function changeImage(hoveredDiv) {
             var imageUrl = hoveredDiv.querySelector('img').getAttribute('src');
             var altText = hoveredDiv.querySelector('img').getAttribute('alt');
             document.getElementById('selected-div').style.backgroundImage = 'url(' + imageUrl + ')';
-            document.getElementById('selected-div').innerHTML = '<p>' + altText + '</p>';
+            document.getElementById('preview-text').innerHTML = altText;
         }
 
         function undo() {
             document.getElementById('selected-div').style.backgroundImage = defaultBackground;
-            document.getElementById('selected-div').innerHTML = defaultText;
+            document.getElementById('preview-text').innerHTML = defaultText;
         }
     </script>
 
