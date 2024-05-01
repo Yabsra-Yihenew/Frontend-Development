@@ -20,13 +20,14 @@
         }
 
         .big-div {
-            width: 100%;
+            width: 70%;
             height: 300px;
-            background-color: #fff;
+            background-color: #cccaca;
             background-size: cover;
             background-position: center;
             border-bottom: 2px solid #ccc;
             margin-bottom: 20px;
+            margin-left: 17.5%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -34,9 +35,11 @@
         }
 
         .big-div p {
-            font-size: 18px;
-            color: #555;
-            transition: opacity 0.3s ease-in-out;
+            font-size: 30px;
+            color: #5c2828;
+            font-weight: bold;
+            font-style: italic;
+            transition: opacity 0.4s ease-in-out;
             pointer-events: none;
         }
 
@@ -56,6 +59,7 @@
             box-sizing: border-box;
             border: 2px solid #ccc;
             margin: 0 1.5%;
+            margin-bottom: 2%;
             cursor: pointer;
             overflow: hidden;
             transition: border-color 0.3s ease-in-out;
@@ -95,7 +99,18 @@
     <div class="small-div" onmouseover="changeImage(this)" onmouseout="undo()">
         <img src="images/Nissan.jpg" alt="Nissan">
     </div>
+    
+    <div class="small-div" onmouseover="changeImage(this)" onmouseout="undo()">
+        <img src="images/Honda.jpg" alt="Honda">
+    </div>
 
+    <div class="small-div" onmouseover="changeImage(this)" onmouseout="undo()">
+        <img src="images/Porsche.jpg" alt="Porsche">
+    </div>
+
+    <div class="small-div" onmouseover="changeImage(this)" onmouseout="undo()">
+        <img src="images/volksWagen.jpg" alt="volksWagen">
+    </div>
     <script>
         var defaultBackground = document.getElementById('selected-div').style.backgroundImage;
         var defaultText = document.getElementById('preview-text').innerHTML;
