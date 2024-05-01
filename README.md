@@ -1,2 +1,2 @@
-# Frontend-Development
-A login page using HTML-CSS and Javascript
+# Frontend-Development(JS, HTML, CSS)
+Web pages using HTML-CSS and Javascript
