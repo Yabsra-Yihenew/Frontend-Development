@@ -20,13 +20,32 @@
         }
 
         .big-div {
-            width: 100%;
+            width: 70%;
             height: 300px;
             background-color: #fff;
             background-size: cover;
             background-position: center;
             border-bottom: 2px solid #ccc;
             margin-bottom: 20px;
+            margin-left: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-image 0.3s ease-in-out;
+        }
+
+        .big-div p {
+            font-size: 30px;
+            color: #000000;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .big-div:hover {
+            background-size: 110%;
+        }
+
+        .big-div:hover p {
+            opacity: 0;
         }
 
         .small-div {
@@ -62,25 +81,27 @@
 <body>
     <h1>Car Collections</h1>
     <div class="big-div" id="selected-div">
-        <p>Click images to preview</p>
+        <p>Hover over images to preview</p>
     </div>
 
-    <div class="small-div" onclick="changeImage(this)">
+    <div class="small-div" onmouseover="changeImage(this)">
         <img src="images/Toyota.jpg" alt="Toyota">
     </div>
 
-    <div class="small-div" onclick="changeImage(this)">
+    <div class="small-div" onmouseover="changeImage(this)">
         <img src="images/Ford.jpg" alt="Ford">
     </div>
 
-    <div class="small-div" onclick="changeImage(this)">
+    <div class="small-div" onmouseover="changeImage(this)">
         <img src="images/Nissan.jpg" alt="Nissan">
     </div>
 
     <script>
-        function changeImage(clickedDiv) {
-            var imageUrl = clickedDiv.querySelector('img').getAttribute('src');
+        function changeImage(hoveredDiv) {
+            var imageUrl = hoveredDiv.querySelector('img').getAttribute('src');
+            var altText = hoveredDiv.querySelector('img').getAttribute('alt');
             document.getElementById('selected-div').style.backgroundImage = 'url(' + imageUrl + ')';
+            document.getElementById('selected-div').innerHTML = '<p>' + altText + '</p>';
         }
     </script>
 
