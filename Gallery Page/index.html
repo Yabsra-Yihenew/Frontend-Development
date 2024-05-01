@@ -20,14 +20,13 @@
         }
 
         .big-div {
-            width: 70%;
+            width: 100%;
             height: 300px;
             background-color: #fff;
             background-size: cover;
             background-position: center;
             border-bottom: 2px solid #ccc;
             margin-bottom: 20px;
-            margin-left: 20%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -35,8 +34,8 @@
         }
 
         .big-div p {
-            font-size: 30px;
-            color: #000000;
+            font-size: 18px;
+            color: #555;
             transition: opacity 0.3s ease-in-out;
         }
 
@@ -84,24 +83,32 @@
         <p>Hover over images to preview</p>
     </div>
 
-    <div class="small-div" onmouseover="changeImage(this)">
+    <div class="small-div" onmouseover="changeImage(this)" onmouseout="undo()">
         <img src="images/Toyota.jpg" alt="Toyota">
     </div>
 
-    <div class="small-div" onmouseover="changeImage(this)">
+    <div class="small-div" onmouseover="changeImage(this)" onmouseout="undo()">
         <img src="images/Ford.jpg" alt="Ford">
     </div>
 
-    <div class="small-div" onmouseover="changeImage(this)">
+    <div class="small-div" onmouseover="changeImage(this)" onmouseout="undo()">
         <img src="images/Nissan.jpg" alt="Nissan">
     </div>
 
     <script>
+        var defaultBackground = document.getElementById('selected-div').style.backgroundImage;
+        var defaultText = document.getElementById('selected-div').innerHTML;
+
         function changeImage(hoveredDiv) {
             var imageUrl = hoveredDiv.querySelector('img').getAttribute('src');
             var altText = hoveredDiv.querySelector('img').getAttribute('alt');
             document.getElementById('selected-div').style.backgroundImage = 'url(' + imageUrl + ')';
             document.getElementById('selected-div').innerHTML = '<p>' + altText + '</p>';
+        }
+
+        function undo() {
+            document.getElementById('selected-div').style.backgroundImage = defaultBackground;
+            document.getElementById('selected-div').innerHTML = defaultText;
         }
     </script>
 
