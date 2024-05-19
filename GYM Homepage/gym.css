@@ -1,0 +1,277 @@
+body{
+    margin: 20px;  
+    padding-left:  2%;  
+    padding-right:  2%;  
+    border-radius: 1px;
+    border-color: bisque;
+    position: relative;
+    font-family: Lucida ;
+    background-color: black;
+    color: aliceblue;
+}
+.header{
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    position: sticky;
+    transition-property: none;
+}
+.header_img{
+    display: flex;
+    flex-direction: row;
+   
+}
+.header_img img{
+   width: 130px;
+   height: 130px; 
+}
+.header_img a {
+    
+    margin-top: auto;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.header_img b{
+    display: flex;
+    margin-top: 25%;
+}
+.header ul{ 
+    display:inline-flex;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: start;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+.header ul li a
+{
+    align-items: left;
+    text-decoration: none;
+    color: rgb(235, 13, 13);
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: inline-block;
+    font-size: large;
+}
+.header ul li a:hover
+{
+    color: rgb(207, 229, 243);
+    transition: 0.3s;
+    transform: scale(1.15);
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.header ul li a:active{
+    color: rgb(102, 159, 184);
+    
+}
+.text-area{
+    float: left;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    text-transform: uppercase;
+    position: relative;
+    font-size: larger;
+    width: 100%;
+  
+}
+.writing{
+    margin-top: 10%;
+    margin-left: 5%;
+    width: 150%;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+}
+.writing h2{
+    color: red;
+    font-size: 20px;
+}
+.button{
+    padding-bottom: 3%;
+    font-size: xx-large;
+    width: 55%;  
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 5%;
+    text-shadow: 2cap;
+    color: rgb(0, 0, 0);
+    background-color: red;
+}
+.button button{
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    font-size: large;
+    font-weight: bolder;
+}
+.button:hover{
+    transform: scale(1.1);
+    color: rgb(214, 18, 18);
+    background-color: rgb(0, 0, 0);
+    border: 3px solid rgb(207, 27, 27);
+} 
+.button button:hover{
+    color: inherit;
+}
+.imgonly img{
+    margin-left: 0%;
+    background-position:cover;
+    width: 150%;
+    width: 1000px;
+    height: 600px;
+    margin-bottom: 4%;
+}
+#container{
+    float: left;
+    width: 29%;
+    padding: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 22px;
+    background-color: rgb(29, 28, 28);
+    color: rgb(255, 255, 255);
+    border: 3px ;
+    margin: 2%;
+    padding: 4%;
+}
+#container a{
+    text-decoration: none;
+
+}
+#container a h1:hover{
+    color: rgb(202, 191, 187);
+    transition: 0.3s;
+    transform: scale(1.2);
+    font-weight: bolder;
+    text-decoration: solid;
+}
+#container a h1{
+    text-shadow:grey 20px;
+    text-decoration-color: black;
+    color: white;
+}
+#container p{
+    font-style: italic;
+    font-weight: lighter;
+    font-size: large;
+}
+#container img{
+
+    background-color: black;
+    width: 200px;
+}
+
+#text{
+    float: left;
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+    margin-right: 50%;
+    text-align: right;
+    font-size: xx-large;
+    font-weight: bolder;
+    gap: 29px;
+    width: 100%;
+}
+
+#schedule{
+    display: inline;
+    float: left;
+    width: 20%;
+    padding: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: rgb(60, 61, 61);
+    color: rgb(236, 214, 214);
+    border: 3px ;
+    margin: 2%;
+    padding: 2%;
+    font-size: xx-small;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#schedule h3{
+    font-style: italic;
+    font-weight: lighter;
+    font-size: large;
+}
+#schedule h1{
+    font-style: normal;
+    color: rgb(159, 185, 64);
+    font-weight: lighter;
+    font-size: large;
+}
+#schedule h1{
+    font-style: normal;
+   
+    font-weight: lighter;
+    font-size: large;
+}
+
+@media screen and (max-width: 600px){
+    .header {
+        float: left;
+        width: 50%; 
+        padding: 3px;
+        text-align: justify;
+        border-right: none;
+        box-sizing: content-box;
+    }
+    
+    .text-area{
+        position: normal;
+        float: left;
+        width: 50%;
+        padding: 0px;
+        text-align: justify;
+        box-sizing: border-box;
+        border-radius: 2px;
+    }
+    .button{
+        position: normal;
+        float: left;
+        width: 50%;
+        padding: 0px;
+        text-align: justify;
+        box-sizing: border-box;
+        border-radius: 2px;
+    }
+    .imgonly{
+        position: normal;
+        float: left;
+        width: 50%;
+        padding: 0px;
+        text-align: justify;
+        box-sizing: border-box;
+        border-radius: 2px;   
+    }
+    #container{
+        float: left;
+        width: 50%;
+     }
+     #text{
+        position: normal;
+        float: left;
+        width: 50%;
+        padding: 0px;
+        text-align: justify;
+        box-sizing: border-box;
+        border-radius: 2px;
+
+     }
+     #schedule{
+        float: left;
+        width: 50%; 
+     }
+}
