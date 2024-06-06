@@ -17,3 +17,14 @@ body {
     max-width: 400px;
     width: 100%;
 }
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.converter {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
