@@ -10,22 +10,18 @@
     <div class="container">
         <h1>Temperature Converter</h1>
         <div class="converter">
-            <input type="number" id="inputValue" placeholder="Enter temperature">
-            <select id="inputUnit">
-                <option value="Celsius">Celsius</option>
-                <option value="Fahrenheit">Fahrenheit</option>
-                <option value="Kelvin">Kelvin</option>
-            </select>
+            <div class="input-group">
+                <input type="text" id="temperatureInput" placeholder="Enter Temperature">
+                <select id="scaleInput">
+                    <option value="C">Celsius</option>
+                    <option value="F">Fahrenheit</option>
+                    <option value="K">Kelvin</option>
+                </select>
+            </div>
             <button onclick="convertTemperature()">Convert</button>
-            <select id="outputUnit">
-                <option value="Celsius">Celsius</option>
-                <option value="Fahrenheit">Fahrenheit</option>
-                <option value="Kelvin">Kelvin</option>
-            </select>
-            <p id="result"></p>
+            <input type="text" id="resultOutput" placeholder="Result" readonly>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
-
