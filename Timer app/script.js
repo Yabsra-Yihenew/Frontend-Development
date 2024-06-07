@@ -1,4 +1,3 @@
-// script.js
 let timerInterval;
 let elapsedTime = 0;
 
