@@ -1,4 +1,3 @@
-// script.js
 document.getElementById('start-button').addEventListener('click', function() {
     // Set the duration for the countdown (e.g., 1 hour in milliseconds)
     let duration = 60 * 60 * 1000; // 1 hour
