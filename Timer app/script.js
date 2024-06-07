@@ -1,3 +1,4 @@
+// script.js
 let timerInterval;
 let elapsedTime = 0;
 
@@ -19,4 +20,12 @@ document.getElementById('start-button').addEventListener('click', function() {
 
 document.getElementById('stop-button').addEventListener('click', function() {
     clearInterval(timerInterval);
+});
+
+document.getElementById('clear-button').addEventListener('click', function() {
+    clearInterval(timerInterval);
+    elapsedTime = 0;
+    document.getElementById('hours').innerHTML = '00';
+    document.getElementById('minutes').innerHTML = '00';
+    document.getElementById('seconds').innerHTML = '00';
 });
